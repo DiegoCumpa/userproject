@@ -1,0 +1,16 @@
+resilience4j:
+  ratelimiter:
+    configs:
+      default:
+        limitForPeriod: 1
+        limitRefreshPeriod: 1s
+        timeoutDuration: 0
+    instances:
+      getUser:
+        baseConfig: default
+      postUser:
+        baseConfig: default
+      putUser:
+        baseConfig: default
+      deleteUser:
+        baseConfig: default
